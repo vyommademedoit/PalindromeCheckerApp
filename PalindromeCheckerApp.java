@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class PalindromeCheckerApp {
@@ -103,6 +105,30 @@ public class PalindromeCheckerApp {
 
     
     public static void uc6(){
+        String word = "level";
+
+        Stack<Character> stack = new Stack<>();
+        Queue<Character> queue = new LinkedList<>();
+
+        for(char c : word.toCharArray()) {
+            stack.push(c);
+            queue.add(c);
+        }
+
+        boolean isPalindrome = true;
+
+        while(!stack.isEmpty()) {
+
+            if(!stack.pop().equals(queue.remove())) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if(isPalindrome)
+            System.out.println("UC6: " + word + " is Palindrome");
+        else
+            System.out.println("UC6: " + word + " is NOT Palindrome");
 
     }
 }
