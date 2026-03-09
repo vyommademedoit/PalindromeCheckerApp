@@ -15,6 +15,8 @@ public class PalindromeCheckerApp {
         System.out.println("Version 1.0");
     }
 
+
+
     public static void uc2(){
          String word = "madam";
     String reversed = "";
@@ -29,7 +31,21 @@ public class PalindromeCheckerApp {
         System.out.println("Not Palindrome");
     }
 
-    public static void uc3(){}
+
+
+    public static void uc3(){
+        String word = "level";
+        String reversed = "";
+
+        for(int i = word.length() - 1; i >= 0; i--) {
+            reversed += word.charAt(i);
+        }
+
+        if(word.equals(reversed))
+            System.out.println("UC3: Palindrome");
+        else
+            System.out.println("UC3: Not Palindrome");
+    }
 
     public static void uc4(){}
 
