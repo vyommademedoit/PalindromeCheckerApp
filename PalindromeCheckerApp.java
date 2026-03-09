@@ -47,9 +47,39 @@ public class PalindromeCheckerApp {
             System.out.println("UC3: Not Palindrome");
     }
 
-    public static void uc4(){}
 
-    public static void uc5(){}
+
+    public static void uc4(){
+                String word = "radar";
+        char[] arr = word.toCharArray();
+
+        int start = 0;
+        int end = arr.length - 1;
+        boolean isPalindrome = true;
+
+        while(start < end) {
+
+            if(arr[start] != arr[end]) {
+                isPalindrome = false;
+                break;
+            }
+
+            start++;
+            end--;
+        }
+
+        if(isPalindrome)
+            System.out.println("UC4: " + word + " is Palindrome");
+        else
+            System.out.println("UC4: " + word + " is NOT Palindrome");
+    
+    }
+
+
+
+    public static void uc5(){
+        
+    }
 
     public static void uc6(){}
 }
